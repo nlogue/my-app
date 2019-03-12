@@ -1,8 +1,7 @@
 pipeline {
 	agent{
 		docker {
-		 image 'maven:3-alpine'
-		}
+		 image maven:3-alpine		}
 	}
 	stages{
 	stage("Build"){
