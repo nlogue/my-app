@@ -1,5 +1,10 @@
 FROM openjdk
 
+USER root
+RUN apt-get update
+RUN apt-get install maven
+
+
 VOLUME /jenkins_home/workspace/my-app
 WORKDIR /jenkins_home/workspace/my-app
 

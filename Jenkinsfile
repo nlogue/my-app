@@ -22,6 +22,11 @@ pipeline {
 		steps{
 			echo "deploying"
 		}
-	    }	
+	    }
+	
+	node{
+		def customImage = docker.build("nl0gue/jenkins-app:latest")
+		customImage.push()
+	}	
     }
 }
