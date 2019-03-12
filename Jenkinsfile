@@ -1,23 +1,36 @@
 pipeline {
-	agent{
-	docker{
-		image 'maven:3-alpine'
-}
+	agent none{
 
 }
 	
 	stages{
 	stage("Build"){
+	agent{
+	docker{
+		image 'maven:3-alpine'
+	}
+}
 		steps{
 		echo "building"
+		
 		}
 	}	
 		stage("Test"){
+		agent{
+		docker{
+			image 'maven:3-alpine'
+}
+}
 		steps{
 			echo "testing"
 		}
 	}	
 		stage("Deploy"){
+		agent{
+		docker{
+			image 'maven:3-alpine'
+}
+}
 		steps{
 			echo "deploying"
 		}
