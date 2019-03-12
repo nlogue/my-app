@@ -1,5 +1,10 @@
 pipeline {
-	agent any
+	agent{
+	docker{
+		image 'maven:alpine-3'
+}
+
+}
 	
 	stages{
 	stage("Build"){
